@@ -4,8 +4,8 @@ const Hero = () => {
   return (
     <main className='realative w-full h-screen overflow-hidden flex justify-center mb-[10%]'>
         <video src="public\videos\hero.mp4"
-            //autoPlay
-            //loop
+            autoPlay
+            loop
             muted
             playsInline
             className='w-full h-[95%] object-cover absolute top-0 first-letter:left-0 -z-10'>
@@ -41,7 +41,7 @@ const Hero = () => {
                 <div className='w-8 h-12 border-2 border-[#babaff] rounded-full flex justify-center pt-1'>
                     <div className='w-1 h-3 bg-[#babaff] rounded-full animate-pulse'></div>
                 </div>
-                <p className='text-[#babaff]'> Scroll Down </p>
+                <p className='text-[#babaff] mt-2'> Scroll Down </p>
             </div>
         </div>
     </main>
