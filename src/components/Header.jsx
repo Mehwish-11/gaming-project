@@ -1,4 +1,4 @@
-
+import 'boxicons/css/boxicons.min.css';
 
 const Header = () => {
   return (
@@ -21,7 +21,11 @@ const Header = () => {
             </div>
         </div>
         {/*right secion desktop */}
-        
+        <nav>
+            <a href="#">
+                <i class= 'bx bx-user-circle'></i>
+            </a>
+        </nav>
     </header>
   )
 }
