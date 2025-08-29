@@ -20,6 +20,7 @@ const Header = () => {
                 </button>
             </div>
         </div>
+        {/*right secion desktop */}
         
     </header>
   )
