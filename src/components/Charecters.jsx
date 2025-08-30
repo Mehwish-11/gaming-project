@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Star } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion,  AnimatePresence } from 'framer-motion';
+import Spline from '@splinetool/react-spline';
 
 const Charecters = () => {
   //track which avatar is selected
@@ -201,9 +202,10 @@ const Charecters = () => {
               exit={{x:"-100%"}}
               transition={{duration:0.5}}
               >
-              <img src='public\images\VIKI.png' alt=''/>
+              <Spline scene="https://prod.spline.design/2KQyzdBk2kDsfDDy/scene.splinecode" />
+
             </motion.div>
-          ) : (
+            ) : (
             <motion.div
               key="EVA"
               className='absolute inset-0'
@@ -212,7 +214,8 @@ const Charecters = () => {
               exit={{x:"-100%"}}
               transition={{duration:0.5}}
               >
-              <img src='public\images\EVA.png' alt=''/>
+              
+
             </motion.div>
           )}
           </AnimatePresence>
