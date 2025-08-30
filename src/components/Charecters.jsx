@@ -1,11 +1,65 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Star } from 'lucide-react';
 import { motion,  AnimatePresence } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
 
+//customCursor component to accept isHovering prop
+function CustomCursor({ isHovering3D }) {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const cursorRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    }
+    document.addEventListener('mousemove', handleMouseMove)
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove)
+    };
+  })
+  return (
+    <motion.div ref={cursorRef}
+    className="fixed top-0 left-0 z-50 pointer-events-none 
+    mix-blend-difference "
+    animate={{
+      x: position.x - (isHovering3D ? 12 : 15),
+      y: position.y - (isHovering3D ? 12 : 15),
+      scale: isHovering3D ? 1.5 : 1,
+    }}
+    transition={{
+      type: "spring",
+      stiffness: 500,
+      damping: 28,
+      mass: 0.5,
+    }}
+    >
+      <motion.div  
+      className={`rounded-full ${isHovering3D ? "bg-violet-500" : "bg-white"}`}
+      animate={{
+        width: isHovering3D ? "24px" : "40px",
+        height: isHovering3D ? "24px" : "40px",
+      }}
+      transition={{
+        duration: 0.2,
+      }}
+      />
+      {isHovering3D && (
+        <motion.div 
+        className='absolute inset-0 rounded-full bg-transition 
+        border border-violet-500'
+        initial={{scale:0.5, opacity:0 }}
+        animate={{scale:2, opacity:0.5 }}
+        transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
+        />
+      )}
+    </motion.div>
+  )
+}
+
 const Charecters = () => {
   //track which avatar is selected
   const [selectedAvtar, setSelectedAvtar] = useState("VIKI");
+  const [cursorInModelArea, setCursorInModelArea] = useState(false);
 
   //simplified avatar data
   const Avatar = {
@@ -30,8 +84,18 @@ const Charecters = () => {
   //Get current Avatar data 
   const currentAvtar = Avatar[selectedAvtar];
 
+  const handleMouseEnter3D = () => {
+    setCursorInModelArea(true);
+  }
+
+  const handleMouseLeave3D = () => {
+    setCursorInModelArea(false);
+  }
+
   return (
-    <div className='realtive w-full h-screen overflow-hidden mb-[10%]'>
+    <div className='relative w-full h-screen overflow-hidden '>
+
+      < CustomCursor isHovering3D={cursorInModelArea}/>
 
       {/* section title */}
 
@@ -191,7 +255,9 @@ const Charecters = () => {
         </div>
         {/* right side - Avtar visual */}
         <div className='relative md:w-2/4 w-full md:h-full h-80 flex items-center
-         justify-center overflow-hidden'>
+         justify-center overflow-hidden'
+         onMouseEnter={handleMouseEnter3D}
+         onMouseLeave={handleMouseLeave3D}>
           <AnimatePresence mode='wait'>
           {selectedAvtar === "VIKI" ? (
             <motion.div
