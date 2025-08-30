@@ -214,8 +214,7 @@ const Charecters = () => {
               exit={{x:"-100%"}}
               transition={{duration:0.5}}
               >
-              
-
+                <Spline scene="https://prod.spline.design/cF9bXSgunsgWLS-s/scene.splinecode" />
             </motion.div>
           )}
           </AnimatePresence>
