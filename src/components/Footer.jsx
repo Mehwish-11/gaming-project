@@ -6,11 +6,11 @@ const Footer = () => {
       lg:mt[15%] mt-[25%] py-8 lg:px-32 md:px-16 px-8 border-t-[0, 3px]
       border-[#babaff]'>
         <img className='h-10'
-         src='public/images/illu-text.png'
+         src='/images/illu-text.png'
          alt='illu text logo'>
         </img>
         <img className='h-16 md:inline hidden' 
-         src='public\images\illu-logo.png'
+         src='/images/illu-logo.png'
          alt='illu logo'
         />
 
