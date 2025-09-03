@@ -32,7 +32,7 @@ const Hero = () => {
                 ZERO
             </div>
             <p className='max-w-[80%] text-center text-[#babaff]'>
-                Notice; Illucium Games are in Bets. Participation involves risk.
+                Notice: Illucium Games are in Bets. Participation involves risk.
                 Read our full Disclaimer here.
             </p>
         </div>
