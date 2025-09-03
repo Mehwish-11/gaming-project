@@ -23,7 +23,7 @@ const Arena = () => {
 
             {/* Card background with gradient */}
             <div className='absolute h-full w-full'>
-              <img src='public\images\bento-card1.png' alt='card-1'></img>
+              <img src='/images/bento-card1.png' alt='card-1'></img>
 
               <button className='absolute bottom-0 h-16 w-full
             bg-black bg-opacity-70 text-2xl font-bold
@@ -38,7 +38,7 @@ const Arena = () => {
           border border-white aspect-[4.5/4] transform transition-transform
           duration-300 hover:scale-105'>
             <video className='w-full h-full object-cover' autoPlay loop muted
-              playsInline src='public\videos\bento-card2.mp4'></video>
+              playsInline src='/videos/bento-card2.mp4'></video>
           </div>
         </div>
         {/* Right column*/}
@@ -51,7 +51,7 @@ const Arena = () => {
             aspect-square transform transition-transform duration-300
             hover:scale-105'>
               <video className='w-full h-full object-cover' autoPlay loop muted
-                playsInline src='public\videos\bento-card3.mp4'>
+                playsInline src='/videos/bento-card3.mp4'>
 
               </video>
               <h1 className='absolute bottom-2 left-1/2
@@ -63,7 +63,7 @@ const Arena = () => {
               aspect-square transform transition-transform duration-300
               hover:scale-105'>
               <video className='w-full h-full object-cover' autoPlay loop muted
-                playsInline src='public\videos\bento-card4.mp4'>
+                playsInline src='/videos/bento-card4.mp4'>
 
               </video>
               <h1 className='absolute bottom-2 left-1/2
@@ -75,7 +75,7 @@ const Arena = () => {
             aspect-square transform transition-transform duration-300
             hover:scale-105'>
               <video className='w-full h-full object-cover' autoPlay loop muted
-                playsInline src='public\videos\bento-card5.mp4'>
+                playsInline src='/videos/bento-card5.mp4'>
 
               </video>
               <h1 className='absolute bottom-2 left-1/2
@@ -87,7 +87,7 @@ const Arena = () => {
           <div className='relative overflow-hidden rounded-3xl 
             border border-white aspect-[16/9] transform transition-transform
             duration-300 hover:scale-[1.02]'>
-            <img src='public\images\bento-card5.png '></img>
+            <img src='/images/bento-card5.png '></img>
             
             <button className='absolute bottom-0 h-16 w-full
             bg-black bg-opacity-70 text-2xl font-bold
