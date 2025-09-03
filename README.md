@@ -20,3 +20,16 @@ Deployed with Vercel → Live Demo
 Frontend: React.js, JSX, CSS
 
 Deployment: Vercel
+
+🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to fork this repo and submit a PR.
+
+📜 License
+
+This project is licensed under the MIT License.
+See the LICENSE
+ file for details.
+
+✨ Built with ❤️ using React
