@@ -8,7 +8,7 @@ const Hero = () => {
             loop
             muted
             playsInline
-            className='w-full h-[95%] object-cover absolute top-0 first-letter:left-0 -z-10'>
+            className='w-full h-[100%] object-cover absolute top-0 first-letter:left-0 -z-10'>
         </video>
 
         <div className='absolute bottom-[15%] flex flex-col gap-5 items-center'>
